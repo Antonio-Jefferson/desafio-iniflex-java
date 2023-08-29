@@ -54,9 +54,9 @@ Crie uma classe chamada "Principal" para executar as seguintes ações:
 
 ## Como Marcar os Requisitos Concluídos
 
-- [ ] Classe Pessoa com atributos definidos.
-- [ ] Classe Funcionário estendendo a classe Pessoa com atributos adicionais.
-- [ ] Classe Principal criada.
+- [x] Classe Pessoa com atributos definidos.
+- [x] Classe Funcionário estendendo a classe Pessoa com atributos adicionais.
+- [x] Classe Principal criada.
 - [ ] Funcionários inseridos na lista.
 - [ ] Funcionário "João" removido da lista.
 - [ ] Lista de funcionários impressa com formatação adequada.
