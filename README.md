@@ -52,14 +52,14 @@ Crie uma classe chamada "Principal" para executar as seguintes ações:
 | Laura     | 12/11/1988         | 1900,00   | Analista  |
 | Sofia     | 08/02/2005         | 2300,00   | Supervisor|
 
-## Requisitos
+## Lista de Requisitos
 
 - [x] Classe Pessoa com atributos definidos.
 - [x] Classe Funcionário estendendo a classe Pessoa com atributos adicionais.
 - [x] Classe Principal criada.
 - [x] Funcionários inseridos na lista.
 - [x] Funcionário "João" removido da lista.
-- [ ] Lista de funcionários impressa com formatação adequada.
+- [x] Lista de funcionários impressa com formatação adequada.
 - [ ] Aumento de 10% no salário dos funcionários e lista atualizada.
 - [ ] Funcionários agrupados por função em um MAP.
 - [ ] Funcionários agrupados por função impressos.

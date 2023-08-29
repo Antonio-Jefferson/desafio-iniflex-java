@@ -24,20 +24,20 @@ public class Employee extends Person{
         this.wage = wage;
     }
 
-    public String getFuction() {
+    public String getFunction() {
         return function;
     }
 
-    public void setFuction(String fuction) {
+    public void setFunction(String fuction) {
         this.function = fuction;
     }
 
     @Override
     public String toString() {
         return 
-                "name='" + getName() + '\'' +
-                ", dateOfBirth=" + getDateOfBirth() +
-                ", wage=" + wage +
-                ", function='" + function + '\'';
+                "Nome " + getName() +
+                ", Data de nacimento: " + getDateOfBirth() +
+                ", Salário: " + wage +
+                ", Função: " + function;
     }
 }
