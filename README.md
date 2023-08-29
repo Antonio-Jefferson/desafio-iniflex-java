@@ -52,7 +52,7 @@ Crie uma classe chamada "Principal" para executar as seguintes ações:
 | Laura     | 12/11/1988         | 1900,00   | Analista  |
 | Sofia     | 08/02/2005         | 2300,00   | Supervisor|
 
-## Como Marcar os Requisitos Concluídos
+## Requisitos
 
 - [x] Classe Pessoa com atributos definidos.
 - [x] Classe Funcionário estendendo a classe Pessoa com atributos adicionais.
