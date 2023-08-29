@@ -57,8 +57,8 @@ Crie uma classe chamada "Principal" para executar as seguintes ações:
 - [x] Classe Pessoa com atributos definidos.
 - [x] Classe Funcionário estendendo a classe Pessoa com atributos adicionais.
 - [x] Classe Principal criada.
-- [ ] Funcionários inseridos na lista.
-- [ ] Funcionário "João" removido da lista.
+- [x] Funcionários inseridos na lista.
+- [x] Funcionário "João" removido da lista.
 - [ ] Lista de funcionários impressa com formatação adequada.
 - [ ] Aumento de 10% no salário dos funcionários e lista atualizada.
 - [ ] Funcionários agrupados por função em um MAP.

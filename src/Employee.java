@@ -34,11 +34,10 @@ public class Employee extends Person{
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return 
                 "name='" + getName() + '\'' +
                 ", dateOfBirth=" + getDateOfBirth() +
                 ", wage=" + wage +
-                ", function='" + function + '\'' +
-                '}';
+                ", function='" + function + '\'';
     }
 }

@@ -17,5 +17,11 @@ public class Main {
         listEmployees.add(new Employee("Pedro", LocalDate.of(1992, Month.APRIL, 20), new BigDecimal("2200.00"), "Gerente"));
         listEmployees.add(new Employee("Laura", LocalDate.of(1988, Month.NOVEMBER, 12), new BigDecimal("1900.00"), "Analista"));
         listEmployees.add(new Employee("Sofia", LocalDate.of(2005, Month.FEBRUARY, 8), new BigDecimal("2300.00"), "Supervisor"));
+
+        listEmployees.removeIf(employee -> employee.getName().equals("João"));
+
+        for (Employee employee : listEmployees) {
+            System.out.println(employee);
+        }
     }
 }
