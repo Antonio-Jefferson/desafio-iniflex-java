@@ -5,6 +5,7 @@ import java.time.Month;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -132,4 +133,14 @@ public class Main {
                 return Period.between(birthDate, currentDate).getYears();
         }
 
+        public static void printEmployeesInAlphabeticalOrder(List<Employee> employees) {
+                List<Employee> sortedEmployees = employees.stream()
+                                .sorted(Comparator.comparing(Employee::getName))
+                                .collect(Collectors.toList());
+
+                System.out.println("Funcionários em ordem alfabética:");
+                for (Employee employee : sortedEmployees) {
+                        System.out.println(employee.getName());
+                }
+        }
 }
