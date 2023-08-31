@@ -66,5 +66,5 @@ Crie uma classe chamada "Principal" para executar as seguintes ações:
 - [x] Funcionários que fazem aniversário em outubro e dezembro impressos.
 - [x] Funcionário com a maior idade impresso.
 - [x] Lista de funcionários impressa em ordem alfabética.
-- [ ] Total dos salários dos funcionários impresso.
-- [ ] Salários mínimos dos funcionários impressos.
+- [x] Total dos salários dos funcionários impresso.
+- [x] Salários mínimos dos funcionários impressos.
