@@ -10,27 +10,36 @@ public class Main {
     public static void main(String[] args) throws Exception {
         List<Employee> listEmployees = new ArrayList<>();
 
+         listEmployees
+                .add(new Employee("Maria", LocalDate.of(2000, Month.OCTOBER, 18), new BigDecimal("2009.44"), "Operador"));
         listEmployees
-                .add(new Employee("João", LocalDate.of(1980, Month.APRIL, 1), new BigDecimal("1500.00"), "Analista"));
+                .add(new Employee("João", LocalDate.of(1990, Month.APRIL, 12), new BigDecimal("2284.38"), "Operador"));
         listEmployees
-                .add(new Employee("Maria", LocalDate.of(1990, Month.AUGUST, 15), new BigDecimal("2000.00"), "Gerente"));
+                .add(new Employee("Caio", LocalDate.of(1961, Month.APRIL, 2), new BigDecimal("9836.14"), "Coordenador"));
+        listEmployees.add(
+                new Employee("Miguel", LocalDate.of(1988, Month.OCTOBER, 14), new BigDecimal("19119.88"), "Diretor"));
+        listEmployees.add(
+                new Employee("Alice", LocalDate.of(1975, Month.DECEMBER, 5), new BigDecimal("1900.00"), "Recepcionísta"));
+        listEmployees.add(
+                new Employee("Heitor", LocalDate.of(1999, Month.NOVEMBER, 19), new BigDecimal("1582.72"), "Operador"));
         listEmployees
-                .add(new Employee("José", LocalDate.of(1985, Month.MARCH, 22), new BigDecimal("1800.00"), "Analista"));
+                .add(new Employee("Arthur", LocalDate.of(1993, Month.MARCH, 31), new BigDecimal("4071.84"), "Contador"));
         listEmployees.add(
-                new Employee("Ana", LocalDate.of(2000, Month.OCTOBER, 10), new BigDecimal("2500.00"), "Supervisor"));
+                new Employee("Laura", LocalDate.of(1994, Month.AUGUST, 8), new BigDecimal("3017.45"), "Gerente"));
         listEmployees.add(
-                new Employee("Carlos", LocalDate.of(1975, Month.DECEMBER, 5), new BigDecimal("1900.00"), "Analista"));
+                new Employee("Heloísa", LocalDate.of(2003, Month.APRIL, 24), new BigDecimal("1606.85"), "Eletricista"));
         listEmployees.add(
-                new Employee("Paula", LocalDate.of(1995, Month.JUNE, 30), new BigDecimal("2100.00"), "Supervisor"));
-        listEmployees
-                .add(new Employee("Pedro", LocalDate.of(1992, Month.APRIL, 20), new BigDecimal("2200.00"), "Gerente"));
-        listEmployees.add(
-                new Employee("Laura", LocalDate.of(1988, Month.NOVEMBER, 12), new BigDecimal("1900.00"), "Analista"));
-        listEmployees.add(
-                new Employee("Sofia", LocalDate.of(2005, Month.FEBRUARY, 8), new BigDecimal("2300.00"), "Supervisor"));
+                new Employee("Helena", LocalDate.of(1996, Month.SEPTEMBER, 2), new BigDecimal("2799.93"), "Gerente"));
 
+        System.out.println("Funcionário João removido da lista");
         listEmployees.removeIf(employee -> employee.getName().equals("João"));
 
+        System.out.println("Imprimindo todos os funcionários");
+        printTableEmployees(listEmployees);
+
+        salaryIncrease(listEmployees);
+
+        System.out.println("Salario atualizado");
         printTableEmployees(listEmployees);
     }
 
@@ -42,11 +51,25 @@ public class Main {
         System.out.println("| --------- | ------------------ | --------- | --------- ");
 
         for (Employee employee : employees) {
-            System.out.printf("|%-10s | %-18s | %-9s | %-9s \n",
+            System.out.printf("|%-10s | %-18s | %-9s | %-9s %n",
                     employee.getName(),
                     employee.getDateOfBirth().format(dateFormatter),
                     salaryFormatter.format(employee.getWage()),
                     employee.getFunction());
         }
+
+    }
+
+    public static List<Employee> salaryIncrease(List<Employee> employees) {
+        BigDecimal increasePercentage = new BigDecimal("0.10");
+
+        for(Employee employee : employees){
+                BigDecimal currentSalary = employee.getWage();
+                BigDecimal increase = currentSalary.multiply(increasePercentage); 
+                BigDecimal newSalary = currentSalary.add(increase); 
+                employee.setWage(newSalary);
+        }
+        return employees;
     }
 }
+
