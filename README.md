@@ -40,17 +40,17 @@ Crie uma classe chamada "Principal" para executar as seguintes ações:
 
 ## Tabela de Funcionários
 
-| Nome      | Data de Nascimento | Salário   | Função    |
-| --------- | ------------------ | --------- | --------- |
-| João      | 01/05/1980         | 1500,00   | Analista  |
-| Maria     | 15/08/1990         | 2000,00   | Gerente   |
-| José      | 22/03/1985         | 1800,00   | Analista  |
-| Ana       | 10/10/2000         | 2500,00   | Supervisor|
-| Carlos    | 05/12/1975         | 1900,00   | Analista  |
-| Paula     | 30/06/1995         | 2100,00   | Supervisor|
-| Pedro     | 20/04/1992         | 2200,00   | Gerente   |
-| Laura     | 12/11/1988         | 1900,00   | Analista  |
-| Sofia     | 08/02/2005         | 2300,00   | Supervisor|
+| Nome      | Data de Nascimento | Salário   | Função    
+| --------- | ------------------ | --------- | --------- 
+|Maria      | 18/10/2000         | 2.009,44  | Operador  
+|Caio       | 02/04/1961         | 9.836,14  | Coordenador 
+|Miguel     | 14/10/1988         | 19.119,88 | Diretor   
+|Alice      | 05/12/1975         | 1.900,00  | Recepcionísta 
+|Heitor     | 19/11/1999         | 1.582,72  | Operador  
+|Arthur     | 31/03/1993         | 4.071,84  | Contador  
+|Laura      | 08/08/1994         | 3.017,45  | Gerente   
+|Heloísa    | 24/04/2003         | 1.606,85  | Eletricista 
+|Helena     | 02/09/1996         | 2.799,93  | Gerente  
 
 ## Lista de Requisitos
 
@@ -60,9 +60,9 @@ Crie uma classe chamada "Principal" para executar as seguintes ações:
 - [x] Funcionários inseridos na lista.
 - [x] Funcionário "João" removido da lista.
 - [x] Lista de funcionários impressa com formatação adequada.
-- [ ] Aumento de 10% no salário dos funcionários e lista atualizada.
-- [ ] Funcionários agrupados por função em um MAP.
-- [ ] Funcionários agrupados por função impressos.
+- [x] Aumento de 10% no salário dos funcionários e lista atualizada.
+- [x] Funcionários agrupados por função em um MAP.
+- [x] Funcionários agrupados por função impressos.
 - [ ] Funcionários que fazem aniversário em outubro e dezembro impressos.
 - [ ] Funcionário com a maior idade impresso.
 - [ ] Lista de funcionários impressa em ordem alfabética.
