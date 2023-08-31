@@ -2,6 +2,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,12 +53,12 @@ public class Main {
 
                 salaryIncrease(listEmployees);
 
-                System.out.println("Salario atualizado");
-                printTableEmployees(listEmployees);
-
                 Map<String, List<Employee>> group = groupEmployeesByFunction(listEmployees);
                 System.out.println(group);
-                
+
+                printEmployeesWithBirthdaysInOctoberAndDecember(listEmployees);
+                printEmployeeWithOldestAge(listEmployees);
+
         }
 
         public static void printTableEmployees(List<Employee> employees) {
@@ -91,7 +92,44 @@ public class Main {
 
         public static Map<String, List<Employee>> groupEmployeesByFunction(List<Employee> employees) {
                 return employees.stream()
-                .collect(Collectors.groupingBy(Employee::getFunction));
+                                .collect(Collectors.groupingBy(Employee::getFunction));
+        }
+
+        public static void printEmployeesWithBirthdaysInOctoberAndDecember(List<Employee> employees) {
+                List<Employee> octoberAndDecemberEmployees = employees.stream()
+                                .filter(employee -> {
+                                        Month birthMonth = employee.getDateOfBirth().getMonth();
+                                        return birthMonth == Month.OCTOBER || birthMonth == Month.DECEMBER;
+                                })
+                                .collect(Collectors.toList());
+
+                System.out.println("Funcionários com aniversário em outubro e dezembro:");
+                for (Employee employee : octoberAndDecemberEmployees) {
+                        System.out.println(employee.getName() + " - " + employee.getDateOfBirth().getMonth());
+                }
+        }
+
+        public static void printEmployeeWithOldestAge(List<Employee> employees) {
+                Employee oldestEmployee = employees.stream()
+                                .max((employee1, employee2) -> {
+                                        LocalDate birthDate1 = employee1.getDateOfBirth();
+                                        LocalDate birthDate2 = employee2.getDateOfBirth();
+                                        return calculateAge(birthDate1).compareTo(calculateAge(birthDate2));
+                                })
+                                .orElse(null);
+
+                if (oldestEmployee != null) {
+                        System.out.println("Funcionário mais velho:");
+                        System.out.println("Nome: " + oldestEmployee.getName());
+                        System.out.println("Idade: " + calculateAge(oldestEmployee.getDateOfBirth()));
+                } else {
+                        System.out.println("Não há funcionários na lista.");
+                }
+        }
+
+        public static Integer calculateAge(LocalDate birthDate) {
+                LocalDate currentDate = LocalDate.now();
+                return Period.between(birthDate, currentDate).getYears();
         }
 
 }

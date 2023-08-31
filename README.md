@@ -63,8 +63,8 @@ Crie uma classe chamada "Principal" para executar as seguintes ações:
 - [x] Aumento de 10% no salário dos funcionários e lista atualizada.
 - [x] Funcionários agrupados por função em um MAP.
 - [x] Funcionários agrupados por função impressos.
-- [ ] Funcionários que fazem aniversário em outubro e dezembro impressos.
-- [ ] Funcionário com a maior idade impresso.
+- [x] Funcionários que fazem aniversário em outubro e dezembro impressos.
+- [x] Funcionário com a maior idade impresso.
 - [ ] Lista de funcionários impressa em ordem alfabética.
 - [ ] Total dos salários dos funcionários impresso.
 - [ ] Salários mínimos dos funcionários impressos.
