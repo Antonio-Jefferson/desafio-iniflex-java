@@ -143,4 +143,14 @@ public class Main {
                         System.out.println(employee.getName());
                 }
         }
+
+        public static void printTotalSalaries(List<Employee> employees) {
+                BigDecimal totalSalaries = BigDecimal.ZERO;
+            
+                for (Employee employee : employees) {
+                    totalSalaries = totalSalaries.add(employee.getWage());
+                }
+            
+                System.out.println("Total dos salários dos funcionários: " + totalSalaries);
+            }
 }
